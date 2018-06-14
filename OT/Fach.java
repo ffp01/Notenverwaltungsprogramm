@@ -23,5 +23,18 @@ public class Fach
         noten.append(new Note (punktwert, schriftlich, quartal));
     }
     
-    
+    public int getNote (int punktwert, boolean schriftlich, int quartal)
+    {
+        noten.toFirst();
+        if (noten.getContent().getSchriftlich() == schriftlich)
+        {
+            if (noten.getContent().getQuartal() == quartal)
+            {
+                
+            }
+            else{
+                
+            }
+        }
+    }
 }
