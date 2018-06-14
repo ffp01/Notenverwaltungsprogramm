@@ -22,4 +22,6 @@ public class Fach
     {
         noten.append(new Note (punktwert, schriftlich, quartal));
     }
+    
+    
 }

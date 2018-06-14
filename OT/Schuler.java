@@ -13,8 +13,8 @@ public class Schuler
         facher = new List <Fach> ();
     }
 
-    public void fachErzeugen(String pFachname)
+    public void fachErzeugen(String name, String lehrer, int kurs, boolean schriftlich)
     {
-        facher.append(new Fach (name, lehrer, int pKurs, boolean pSchriftlich));
+        facher.append(new Fach (name, lehrer, kurs, schriftlich));
     }
 }

@@ -4,15 +4,29 @@
  */
 public class Note
 {
-    private boolean schiftlich;
+    private boolean schriftlich;
     private int punktwert;
     private int quartal;
     
-    public Note(int pPunktwert, boolean pSchiftlich, int pQuartal)
+    public Note(int pPunktwert, boolean pSchriftlich, int pQuartal)
     {
-        schiftlich = pSchiftlich;
+        schriftlich = pSchriftlich;
         punktwert = pPunktwert;
         quartal = pQuartal;
     }
-
+    
+    public int getPunktwert ()
+    {
+        return punktwert;
+    }
+    
+    public boolean getSchriftlich ()
+    {
+        return schriftlich;
+    }
+    
+    public int getQuartal ()
+    {
+        return quartal;
+    }
 }
