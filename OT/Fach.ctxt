@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=Fach
-comment0.text=\r\n\ \r\n
-comment1.params=pName\ pLehrer\ pKurs\ pSchriftlich
-comment1.target=Fach(java.lang.String,\ java.lang.String,\ java.lang.String,\ boolean)
-comment2.params=punktwert\ schriftlich\ quartal
-comment2.target=void\ noteHinzufugen(int,\ boolean,\ int)
-numComments=3
