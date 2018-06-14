@@ -17,4 +17,9 @@ public class Schuler
     {
         facher.append(new Fach (name, lehrer, kurs, schriftlich));
     }
+    
+    public int getNote (String name, boolean schriftlich, int quartal)
+    {
+        facher
+    }
 }
