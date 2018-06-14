@@ -1,6 +1,6 @@
 public class Schulerverwaltung
 {
-    List schulerlist;
+    List<Schuler> schulerlist;
     
     public Schulerverwaltung ()
     {
