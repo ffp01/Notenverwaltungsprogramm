@@ -17,4 +17,5 @@ public class Schuler
     {
         facher.append(new Fach (name, lehrer, kurs, schriftlich));
     }
+    
 }

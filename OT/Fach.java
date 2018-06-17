@@ -11,31 +11,38 @@ public class Fach
     private List<Note> noten;
     public Fach(String pName, String pLehrer, int pKurs, boolean pSchriftlich)
     {
-        noten = new List <Note> ();
+        noten = new List<Note> ();
         name = pName;
         lehrer = pLehrer;
         kurs = pKurs;
         schriftlich = pSchriftlich;
     }
 
-    public void noteHinzufugen(int punktwert, boolean schriftlich, int quartal)
+    public void setNote(int punktwert, boolean schriftlich, int quartal)
     {
         noten.append(new Note (punktwert, schriftlich, quartal));
     }
-    
-    public void getNote (int punktwert, boolean schriftlich, int quartal)
+
+    public int getNote (boolean schriftlich, int quartal)
     {
         noten.toFirst();
-        if (noten.getContent().getSchriftlich() == schriftlich)
+        while(noten.getContent() != null)
         {
-            if (noten.getContent().getQuartal() == quartal)
+            if (noten.getContent().getSchriftlich() == schriftlich)
             {
-                
-            }
-            else{
-                
-            }
-        }
+                if (noten.getContent().getQuartal() == quartal)
+                {
+                    return noten.getContent().getPunktwert();
+                }
+                else{
+                    noten.next();
+                    return getNote(schriftlich, quartal);
+                }
 
+            }
+            noten.next();
+            return getNote(schriftlich, quartal);
+        }
+        return 0; //Falscher Wert
     }
 }
