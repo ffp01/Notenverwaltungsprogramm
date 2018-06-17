@@ -53,7 +53,7 @@ public class Fach
             }
             noten.next();
         }
-        return 0; //Falscher Wert
+        return -1; //Falscher Wert
     }
     
     public void setNote(int punktwert, boolean schriftlich, int quartal)

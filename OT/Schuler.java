@@ -17,7 +17,7 @@ public class Schuler
     {
         facher.append(new Fach (fach, lehrer, kurs, schriftlich));
     }
-
+    
     public String getName()
     {
         return name;
@@ -51,7 +51,7 @@ public class Schuler
         return "";
     }
 
-    public boolean getSchriftlich(String fach)
+    public boolean getSchriftlich(String fach) ///Es muss gewährleistet werden, dass das Fach existiert
     {
         facher.toFirst();
         while (1==1)
@@ -62,6 +62,20 @@ public class Schuler
             }
             facher.next();
         }
+    }
+    
+    public boolean fachVorhanden(String fach)
+    {
+        facher.toFirst();
+        while (facher.getContent() != null)
+        {
+            if (facher.getContent().getName() == fach)
+            {
+                return true;
+            }
+            facher.next();
+        }
+        return false;
     }
     
     public int getNote (String fach, boolean schriftlich, int quartal)
@@ -75,7 +89,7 @@ public class Schuler
             }
             facher.next();
         }
-        return 0;
+        return -1;
     }
 
     public void setNote (String fach, int punktwert, boolean schriftlich, int quartal)
