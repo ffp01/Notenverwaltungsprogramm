@@ -34,15 +34,14 @@ public class Fach
                 {
                     return noten.getContent().getPunktwert();
                 }
-                else{
-                    noten.next();
-                    return getNote(schriftlich, quartal);
-                }
-
             }
             noten.next();
-            return getNote(schriftlich, quartal);
         }
         return 0; //Falscher Wert
+    }
+    
+    public String getName()
+    {
+        return name;
     }
 }

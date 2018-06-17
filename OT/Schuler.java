@@ -5,12 +5,12 @@
 public class Schuler
 {
     private String name;
-    private List facher;
+    private List<Fach> facher;
     
     public Schuler(String pName)
     {
         name = pName;
-        facher = new List <Fach> ();
+        facher = new List<Fach> ();
     }
 
     public void fachErzeugen(String name, String lehrer, int kurs, boolean schriftlich)
@@ -18,4 +18,22 @@ public class Schuler
         facher.append(new Fach (name, lehrer, kurs, schriftlich));
     }
     
+    public int getNote (String name, boolean schriftlich, int quartal)
+    {
+        facher.toFirst();
+        while (facher.getContent() != null)
+        {
+            if (facher.getContent().getName() == name)
+            {
+                return facher.getContent().getNote(schriftlich, quartal);
+            }
+            facher.next();
+        }
+        return 0;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
 }
