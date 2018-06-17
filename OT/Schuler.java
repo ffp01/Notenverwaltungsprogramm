@@ -18,6 +18,11 @@ public class Schuler
         facher.append(new Fach (name, lehrer, kurs, schriftlich));
     }
     
+    public String getName()
+    {
+        return name;
+    }
+    
     public int getNote (String name, boolean schriftlich, int quartal)
     {
         facher.toFirst();
@@ -32,8 +37,18 @@ public class Schuler
         return 0;
     }
     
-    public String getName()
+    public void setNote (String name, int punktwert, boolean schriftlich, int quartal)
     {
-        return name;
+        boolean fertig = true;
+        facher.toFirst();
+        while (facher.getContent() != null && fertig)
+        {
+            if (facher.getContent().getName() == name)
+            {
+                facher.getContent().setNote(punktwert, schriftlich, quartal);
+                fertig = false;
+            }
+            facher.next();
+        }
     }
 }

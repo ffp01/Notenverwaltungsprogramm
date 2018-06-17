@@ -9,6 +9,7 @@ public class Fach
     private boolean schriftlich;
     private int kurs;
     private List<Note> noten;
+    
     public Fach(String pName, String pLehrer, int pKurs, boolean pSchriftlich)
     {
         noten = new List<Note> ();
@@ -17,12 +18,12 @@ public class Fach
         kurs = pKurs;
         schriftlich = pSchriftlich;
     }
-
-    public void setNote(int punktwert, boolean schriftlich, int quartal)
+    
+    public String getName()
     {
-        noten.append(new Note (punktwert, schriftlich, quartal));
+        return name;
     }
-
+    
     public int getNote (boolean schriftlich, int quartal)
     {
         noten.toFirst();
@@ -40,8 +41,8 @@ public class Fach
         return 0; //Falscher Wert
     }
     
-    public String getName()
+    public void setNote(int punktwert, boolean schriftlich, int quartal)
     {
-        return name;
+        noten.append(new Note (punktwert, schriftlich, quartal));
     }
 }

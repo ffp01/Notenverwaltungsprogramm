@@ -2,6 +2,12 @@
 comment0.target=Schulerverwaltung
 comment1.params=
 comment1.target=Schulerverwaltung()
-comment2.params=pName
+comment2.params=name
 comment2.target=void\ schulerAdd(java.lang.String)
-numComments=3
+comment3.params=name
+comment3.target=void\ schulerDelete(java.lang.String)
+comment4.params=name\ fach\ schriftlich\ quartal
+comment4.target=int\ getNote(java.lang.String,\ java.lang.String,\ boolean,\ int)
+comment5.params=name\ fach\ punktwert\ schriftlich\ quartal
+comment5.target=void\ setNote(java.lang.String,\ java.lang.String,\ int,\ boolean,\ int)
+numComments=6
