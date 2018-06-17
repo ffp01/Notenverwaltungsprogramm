@@ -1,12 +1,18 @@
 #BlueJ class context
 comment0.target=Fach
 comment0.text=\r\n\ \r\n
-comment1.params=pName\ pLehrer\ pKurs\ pSchriftlich
-comment1.target=Fach(java.lang.String,\ java.lang.String,\ int,\ boolean)
+comment1.params=pFach\ pLehrer\ pKurs\ pSchriftlich
+comment1.target=Fach(java.lang.String,\ java.lang.String,\ java.lang.String,\ boolean)
 comment2.params=
 comment2.target=java.lang.String\ getName()
-comment3.params=schriftlich\ quartal
-comment3.target=int\ getNote(boolean,\ int)
-comment4.params=punktwert\ schriftlich\ quartal
-comment4.target=void\ setNote(int,\ boolean,\ int)
-numComments=5
+comment3.params=
+comment3.target=java.lang.String\ getLehrer()
+comment4.params=
+comment4.target=java.lang.String\ getKurs()
+comment5.params=
+comment5.target=boolean\ getSchriftlich()
+comment6.params=schriftlich\ quartal
+comment6.target=int\ getNote(boolean,\ int)
+comment7.params=punktwert\ schriftlich\ quartal
+comment7.target=void\ setNote(int,\ boolean,\ int)
+numComments=8

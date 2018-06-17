@@ -4,16 +4,16 @@
  */
 public class Fach
 {
-    private String name;
+    private String fach;
     private String lehrer;
+    private String kurs;
     private boolean schriftlich;
-    private int kurs;
     private List<Note> noten;
     
-    public Fach(String pName, String pLehrer, int pKurs, boolean pSchriftlich)
+    public Fach(String pFach, String pLehrer, String pKurs, boolean pSchriftlich)
     {
         noten = new List<Note> ();
-        name = pName;
+        fach = pFach;
         lehrer = pLehrer;
         kurs = pKurs;
         schriftlich = pSchriftlich;
@@ -21,7 +21,22 @@ public class Fach
     
     public String getName()
     {
-        return name;
+        return fach;
+    }
+    
+    public String getLehrer()
+    {
+        return lehrer;
+    }
+    
+    public String getKurs()
+    {
+        return kurs;
+    }
+    
+    public boolean getSchriftlich()
+    {
+        return schriftlich;
     }
     
     public int getNote (boolean schriftlich, int quartal)

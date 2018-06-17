@@ -27,6 +27,36 @@ public class Schulerverwaltung
         }
     }
     
+    public void fachErzeugen(String name, String fach, String lehrer, String kurs, boolean schriftlich)
+    {
+        boolean fertig = true;
+        schulerlist.toFirst();
+        while (schulerlist.getContent() != null && fertig)
+        {
+            if(schulerlist.getContent().getName() == name)
+            {
+                schulerlist.getContent().fachErzeugen(fach, lehrer, kurs, schriftlich);
+                fertig = false;
+            }
+            schulerlist.next();
+        }
+    }
+    
+    public void listeSchuler()
+    {
+        schulerlist.toFirst();
+        while (schulerlist.getContent() != null)
+        {
+            System.out.println("sffsf");
+            schulerlist.next();
+        }
+    }
+    
+    
+    
+    
+    
+    
     public int getNote (String name, String fach, boolean schriftlich, int quartal)
     {
         schulerlist.toFirst();
