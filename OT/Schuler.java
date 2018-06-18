@@ -7,23 +7,23 @@ public class Schuler
     private String name;
     private List<Fach> facher;
 
-    public Schuler(String pName)
+    public Schuler (String pName)
     {
         name = pName;
         facher = new List<Fach> ();
     }
 
-    public void fachErzeugen(String fach, String lehrer, String kurs, boolean schriftlich)
+    public void fachErzeugen (String fach, String lehrer, String kurs, boolean schriftlich)
     {
         facher.append(new Fach (fach, lehrer, kurs, schriftlich));
     }
     
-    public String getName()
+    public String getName ()
     {
         return name;
     }
 
-    public String getLehrer(String fach)
+    public String getLehrer (String fach)
     {
         facher.toFirst();
         while (facher.getContent() != null)
@@ -37,7 +37,7 @@ public class Schuler
         return "Fach existiert nicht";
     }
 
-    public String getKurs(String fach)
+    public String getKurs (String fach)
     {
         facher.toFirst();
         while (facher.getContent() != null)
@@ -51,7 +51,7 @@ public class Schuler
         return "Fach existiert nicht";
     }
 
-    public boolean getSchriftlich(String fach) ///Es muss gewährleistet werden, dass das Fach existiert
+    public boolean getSchriftlich (String fach) ///Es muss gewährleistet werden, dass das Fach existiert
     {
         facher.toFirst();
         while (1==1)
@@ -64,7 +64,7 @@ public class Schuler
         }
     }
     
-    public boolean fachVorhanden(String fach)
+    public boolean fachVorhanden (String fach)
     {
         facher.toFirst();
         while (facher.getContent() != null)

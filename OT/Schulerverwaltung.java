@@ -80,7 +80,7 @@ public class Schulerverwaltung
         return "";
     }
 
-    public String getSchriftlich(String name, String fach)
+    public String getSchriftlich (String name, String fach)
     {
         schulerlist.toFirst();
         while (schulerlist.getContent() != null)

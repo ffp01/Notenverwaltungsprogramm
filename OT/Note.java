@@ -8,7 +8,7 @@ public class Note
     private int punktwert;
     private int quartal;
     
-    public Note(int pPunktwert, boolean pSchriftlich, int pQuartal)
+    public Note (int pPunktwert, boolean pSchriftlich, int pQuartal)
     {
         schriftlich = pSchriftlich;
         punktwert = pPunktwert;
