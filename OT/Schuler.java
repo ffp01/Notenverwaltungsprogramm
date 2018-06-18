@@ -34,7 +34,7 @@ public class Schuler
             }
             facher.next();
         }
-        return "";
+        return "Fach existiert nicht";
     }
 
     public String getKurs(String fach)
@@ -48,7 +48,7 @@ public class Schuler
             }
             facher.next();
         }
-        return "";
+        return "Fach existiert nicht";
     }
 
     public boolean getSchriftlich(String fach) ///Es muss gewährleistet werden, dass das Fach existiert
